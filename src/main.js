@@ -2,14 +2,28 @@ import { fetchImages } from './services/unsplashService.js'
 import { renderHeader } from './components/Header.js'
 import { renderImageGallery } from './components/ImageGallery.js'
 
-// Renderiza el header con la barra de búsqueda
 renderHeader(onSearch)
 
-// Función para manejar la búsqueda
+// Función para la búsqueda
 async function onSearch(query) {
  const images = await fetchImages(query)
- renderImageGallery(images)
+
+ // Contenedor de resultados
+ const container = document.getElementById('results-container')
+
+ // Si no hay resultado, muestra mensaje...
+ if (images.length === 0) {
+  container.innerHTML = `
+      <p class="no-results">
+        No se encontraron resultados para "${query}". Intenta buscar "gatos" u otra palabra.
+      </p>
+    `
+  renderImageGallery([])
+ } else {
+  container.innerHTML = ''
+  renderImageGallery(images)
+ }
 }
 
-// Carga inicial de imágenes populares
+// carga de imagenes
 onSearch('popular')

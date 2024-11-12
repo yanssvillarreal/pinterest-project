@@ -120,3 +120,24 @@ body {
  position: relative;
  top: -20px;
 }
+
+.no-results {
+ color: #555;
+ font-size: 1.2em;
+ text-align: center;
+ margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+ .header__icons {
+  display: none;
+ }
+
+ .header {
+  padding: 10px 10px;
+ }
+
+ .header__nav {
+  gap: 10px;
+ }
+}
