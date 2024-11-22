@@ -4,7 +4,7 @@ export function renderHeader(onSearch) {
 
  header.innerHTML = `
     <div class="header__logo" id="logo">
-      <img src="./public/assets/pinterest.png" alt="Logo" class="logo-icon" />
+      <img src="./assets/pinterest.png" alt="Logo" class="logo-icon" />
     </div>
     <nav class="header__nav">
       <button class="nav-button" id="inicio-btn">Inicio</button>
@@ -15,9 +15,9 @@ export function renderHeader(onSearch) {
       <input type="text" id="search-input" placeholder="Buscar imágenes..." />
     </form>
     <div class="header__icons">
-      <img src="./public/assets/campana.png" alt="Campana" class="icon" id="campana-icon" />
-      <img src="./public/assets/comentario.png" alt="Mensajes" class="icon" id="mensajes-icon" />
-      <img src="./public/assets/profile-user.png" alt="Perfil" class="icon" id="perfil-icon" />
+      <img src="./assets/campana.png" alt="Campana" class="icon" id="campana-icon" />
+      <img src="./assets/comentario.png" alt="Mensajes" class="icon" id="mensajes-icon" />
+      <img src="./assets/profile-user.png" alt="Perfil" class="icon" id="perfil-icon" />
     </div>
   `
 
