@@ -1,5 +1,5 @@
 import { fetchImages } from './services/unsplashService.js'
-import { renderHeader } from './components/Header.js'
+import { renderHeader } from './components/header.js'
 import { renderImageGallery } from './components/ImageGallery.js'
 
 renderHeader(onSearch)
